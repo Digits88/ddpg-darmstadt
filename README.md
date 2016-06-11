@@ -7,7 +7,16 @@ After you have set up password-free login you can access your cluster files via
 ```
 nautilus sftp://<username>@lcluster2.hrz.tu-darmstadt.de/home/<username> & exit
 ```
-It might be convenient to create a bash function for this in the `~\.bashrc` on your machine.
+<details> 
+  <summary>It might be convenient to create a bash function for this in the `~\.bashrc` on your machine.</summary>
+  ```bash
+  function clfiles {
+    nautilus sftp://<username>@lcluster2.hrz.tu-darmstadt.de/home/<username> & exit
+  }
+  ```
+</details>
+
+  
 
 To use python on the cluster we need to load some modules first. Add the following to your `~\.bashrc` on the cluster.
 ```bash
@@ -38,3 +47,4 @@ To use gym [mujoco](http://www.mujoco.org/) bindings, follow the instructions at
 
 ##### Submitting Jobs
 If you have to do many evaluations, [ezex](https://github.com/simonramstedt/ezex) might be helpful. It is not really finished however. Message me if interested!
+
