@@ -16,7 +16,8 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 ```
 
 ##### Tensorflow
-Use pip to install the CPU version of TensorFlow. Follow the [instructions](https://www.tensorflow.org/versions/r0.9/get_started/os_setup.html#pip-installation). Notice that we have to install python packages via `pip install <package-name> --user` because we do not have root access. Installing the GPU version of TensorFlow is a bit more involved - message me if interested!
+Use pip to install the CPU version of TensorFlow. Follow the [instructions](https://www.tensorflow.org/versions/r0.9/get_started/os_setup.html#pip-installation). Notice that we have to install python packages via `pip install <package-name> --user` because we do not have root access.
+*TODO: Installing the GPU version of TensorFlow*
 
 ##### OpenAI Gym
 Install gym via `pip install gym --user`.
@@ -33,3 +34,7 @@ export DISPLAY=:1
 
 To use gym [mujoco](http://www.mujoco.org/) bindings, follow the instructions at https://github.com/openai/mujoco-py.
 
+*TODO: how to explicitly run ddpg*
+
+##### Submitting Jobs
+If you have to do many evaluations, [ezex](https://github.com/simonramstedt/ezex) might be helpful. It is not really finished however. Message me if interested!
