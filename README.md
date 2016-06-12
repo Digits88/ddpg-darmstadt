@@ -1,5 +1,4 @@
-## ddpg-darmstadt
-### Prerequisites for [ddpg](https://github.com/simonramstedt/ddpg) on the TU-Darmstadt Lichtenberg cluster
+### [ddpg](https://github.com/simonramstedt/ddpg) on the TU-Darmstadt Lichtenberg cluster
 
 For general information about the cluster usage see [hhlr](http://www.hhlr.tu-darmstadt.de/hhlr/arbeit_auf_dem_cluster/index.de.jsp).
 
@@ -25,7 +24,7 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/bin
 ```
 
 ##### Tensorflow
-Use pip to install the CPU version of TensorFlow. Follow the [instructions](https://www.tensorflow.org/versions/r0.9/get_started/os_setup.html#pip-installation). Notice that we have to install python packages via `pip install <package-name> --user` because we do not have root access.
+Use pip to install the CPU version of TensorFlow. Follow the [instructions](https://www.tensorflow.org/versions/r0.9/get_started/os_setup.html#pip-installation). Notice that we have to install python packages via `pip install --user <package-name>` because we do not have root access.
 *TODO: Installing the GPU version of TensorFlow*
 
 ##### OpenAI Gym
