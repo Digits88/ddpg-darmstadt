@@ -41,10 +41,41 @@ trap 'kill $(jobs -p)' EXIT
 export DISPLAY=:1
 ```
 
-To use gym [mujoco](http://www.mujoco.org/) bindings, follow the instructions at https://github.com/openai/mujoco-py.
+To use the gym [mujoco](http://www.mujoco.org/) bindings, follow the instructions at https://github.com/openai/mujoco-py.
 
-*TODO: how to explicitly run ddpg*
+### Usage
+Example:
+```bash
+python run.py --outdir ../ddpg-results/experiment1 --env Reacher-v1
+```
+Enter `python run.py -h` to get a complete overview.
 
-##### Submitting Jobs
-If you have to do many evaluations, [ezex](https://github.com/simonramstedt/ezex) might be helpful. It is not really finished however. Message me if interested!
+Submit a SLURM job via:
+```
+python run.py --outdir ../ddpg-results/experiment1 --env Reacher-v1 --job
+```
+
+### Dashboard
+Example:
+```bash
+python dashboard.py --exdir ../ddpg-results
+```
+Enter `python dashboard.py -h` to get a complete overview.
+
+<details> 
+  <summary>
+  To use the visualization dashboard remotely you have to set up port forwards. You could add this to the `~\.bashrc` on your machine.
+  </summary>
+  ```bash
+  function remote {
+    xdg-open http://localhost:8007/tree/dashboard.ipynb &
+    ssh -c arcfour <username>@lcluster2.hrz.tu-darmstadt.de \
+        -L 8007:localhost:8007 \
+        -L 8008:localhost:8008 \
+        -L 8009:localhost:8009 \
+        'python ~/ddpg/dashboard.py --nobrowser --exdir <folder-with-results>'
+  }
+  ```
+</details>
+
 
