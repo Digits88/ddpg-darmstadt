@@ -1,4 +1,4 @@
-### [ddpg](https://github.com/simonramstedt/ddpg) on the TU-Darmstadt Lichtenberg cluster
+### How to use [ddpg](https://github.com/simonramstedt/ddpg) on the TU-Darmstadt Lichtenberg cluster
 
 For general information about the cluster usage see [hhlr](http://www.hhlr.tu-darmstadt.de/hhlr/arbeit_auf_dem_cluster/index.de.jsp).
 
